@@ -10,5 +10,27 @@
 {%extends 'base.html'%}
 <body>
 
+{%block content%}
+          <div class="form-container">
+            <form action="" class="login-form" method="post" novalidate>
+                 {{form.hidden_tag()}}
+            <p>
+                {{form.username.label}}
+                {{form.username(class='input-field')}}
+            </p>
+            <p>
+                {{form.password.label}}
+                {{form.password(class='input-field')}}
+            </p>
+            <p>
+                {{form.remember_me()}}
+                {{form.remember_me.label}}
+            </p>
+            <p>
+                {{form.submit(class='input-field')}}
+            </p>
+            </form>
+        </div>
+{%endblock%}
 </body>
 </html>
