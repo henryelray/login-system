@@ -26,7 +26,7 @@ color:#fff;
 font-size:1.2em;
 padding:0.5em;
 }
-a:hover{
+li a:hover{
 border-bottom:1px solid orangered;
 }
 .page-title:after {
@@ -51,4 +51,28 @@ margin:8px 0;
 }
 .login-form{
 margin:1em;
+}
+.new-user{
+border-top:1px solid #ccc;
+display:flex;
+padding-left:7em;
+background-color:#eee;
+border-bottom-left-radius: 1em;
+border-bottom-right-radius: 1em;
+}
+.form-link{
+padding:1em 0 0.2em 1em;
+color:#04213d;
+
+}
+.reset-password{
+color:#fff;
+display:flex;
+text-align:center;
+margin:2em 0em 0em 38em;
+left:-5em;
+}
+#reset-link{
+text-decoration-color:orangered;
+color:#fff;
 }
