@@ -79,5 +79,10 @@ color:#fff;
 .error-msg{
 color:red;
 font-size:0.8em;
-
+font-family:Roboto Mono Bold;
+}
+.invalid-error{
+color:red;
+font-size:1em;
+text-align:center;
 }

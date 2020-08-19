@@ -16,7 +16,7 @@
             <li><a href="">Login</a></li>
             <li><a href="">Sign Up</a></li>
             {%else%}
-            <li><a href="">Logout</a></li>
+            <li><a href="{{url_for('login_bp.logout')}}">Logout</a></li>
             <li><a href="">Profile</a></li>
             {%endif%}
         </ul>
@@ -28,7 +28,7 @@
     {%with messages = get_flashed_messages()%}
         {%if messages%}
             {%for message in messages%}
-                {{message}}
+                <p class="invalid-error" >{{message}}</p>
             {%endfor%}
         {%endif%}
     {%endwith%}
