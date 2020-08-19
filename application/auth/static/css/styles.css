@@ -76,3 +76,8 @@ left:-5em;
 text-decoration-color:orangered;
 color:#fff;
 }
+.error-msg{
+color:red;
+font-size:0.8em;
+
+}

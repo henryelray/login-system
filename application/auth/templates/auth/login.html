@@ -17,10 +17,16 @@
             <p>
                 {{form.username.label}}
                 {{form.username(class='input-field')}}
+                {% for error in form.username.errors%}
+                    <span class="error-msg">{{error}}</span>
+                {%endfor%}
             </p>
             <p>
                 {{form.password.label}}
                 {{form.password(class='input-field')}}
+                 {% for error in form.username.errors%}
+                    <span class="error-msg">{{error}}</span>
+                {%endfor%}
             </p>
             <p>
                 {{form.remember_me()}}
