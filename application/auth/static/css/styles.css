@@ -1,0 +1,88 @@
+*{
+box-sizing:border-box;
+}
+body{
+background-color:#000000e6;
+font-family:Roboto Mono Light;
+}
+.page-title{
+text-align:center;
+color:#fff;
+font-size:2em;
+margin-top:1.5em;
+}
+.nav-container{
+display:flex;
+justify-content:flex-end;
+}
+.nav-container ul{
+display:flex;
+list-style-type:none;
+
+}
+.nav-container li a{
+text-decoration:none;
+color:#fff;
+font-size:1.2em;
+padding:0.5em;
+}
+li a:hover{
+border-bottom:1px solid orangered;
+}
+.page-title:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+    padding-top: 10px;
+    border-bottom: 1px solid orangered;
+}
+.form-container{
+border:1px solid #fff;
+margin: 0 auto;
+width:30%;
+background-color:#fff;
+border-radius:1em;
+}
+.input-field{
+width:100%;
+padding:8px 10px;
+margin:8px 0;
+}
+.login-form{
+margin:1em;
+}
+.new-user{
+border-top:1px solid #ccc;
+display:flex;
+padding-left:7em;
+background-color:#eee;
+border-bottom-left-radius: 1em;
+border-bottom-right-radius: 1em;
+}
+.form-link{
+padding:1em 0 0.2em 1em;
+color:#04213d;
+
+}
+.reset-password{
+color:#fff;
+display:flex;
+text-align:center;
+margin:2em 0em 0em 38em;
+left:-5em;
+}
+#reset-link{
+text-decoration-color:orangered;
+color:#fff;
+}
+.error-msg{
+color:red;
+font-size:0.8em;
+font-family:Roboto Mono Bold;
+}
+.invalid-error{
+color:red;
+font-size:1em;
+text-align:center;
+}
