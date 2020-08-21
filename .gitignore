@@ -149,3 +149,4 @@ venv
 /README
 /script.py.mako
 app.db
+/migrations
