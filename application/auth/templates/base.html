@@ -5,9 +5,34 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('.static', filename='css/styles.css')}}">
+    <title>Welcome to my Login System</title>
 </head>
 <body>
+    <nav class="nav-container">
+        <ul>
+            {%if current_user.is_anonymous%}
+            <li><a href="">Home</a></li>
+            <li><a href="">Login</a></li>
+            <li><a href="">Sign Up</a></li>
+            {%else%}
+            <li><a href="{{url_for('login_bp.logout')}}">Logout</a></li>
+            <li><a href="">Profile</a></li>
+            {%endif%}
+        </ul>
+    </nav>
+        {%if current_user.is_anonymous%}
+        <p class="page-title">Login System with Flask </p>
+        {%endif%}
 
+    {%with messages = get_flashed_messages()%}
+        {%if messages%}
+            {%for message in messages%}
+                <p class="invalid-error" >{{message}}</p>
+            {%endfor%}
+        {%endif%}
+    {%endwith%}
+
+    {%block content%}{%endblock%}
 </body>
 </html>

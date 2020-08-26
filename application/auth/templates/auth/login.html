@@ -5,9 +5,44 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Login</title>
 </head>
+{%extends 'base.html'%}
 <body>
 
+{%block content%}
+          <div class="form-container">
+            <form action="" class="login-form" method="post" novalidate>
+                 {{form.hidden_tag()}}
+            <p>
+                {{form.username.label}}
+                {{form.username(class='input-field')}}
+                {% for error in form.username.errors%}
+                    <span class="error-msg">{{error}}</span>
+                {%endfor%}
+            </p>
+            <p>
+                {{form.password.label}}
+                {{form.password(class='input-field')}}
+                 {% for error in form.username.errors%}
+                    <span class="error-msg">{{error}}</span>
+                {%endfor%}
+            </p>
+            <p>
+                {{form.remember_me()}}
+                {{form.remember_me.label}}
+            </p>
+            <p>
+                {{form.submit(class='input-field')}}
+            </p>
+            </form>
+              <footer class="new-user">
+                  <p >New User?</p><a href="" class="form-link">Sign Up</a>
+              </footer>
+        </div>
+        <div class="reset-password">
+            <p>Forgotten Password?</p><a class="form-link" id="reset-link" href="">Reset Password</a>
+        </div>
+{%endblock%}
 </body>
 </html>
